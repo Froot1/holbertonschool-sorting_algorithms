@@ -95,4 +95,4 @@ The idea of ​​the merge-sort algorithms is to divide the array in half over 
 
 ## Author
 * **Fahad Alonazi** - [Froot1](https://github.com/Froot1) # sorting_algorithms
-# sorting_algorithms1
+# sorting_algorithms
