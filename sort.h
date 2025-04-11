@@ -1,28 +1,27 @@
-#ifndef SORT_H
-#define SORT_H
-#include <stddef.h>
+#include "sort.h"
+
 /**
- * struct listint_s - Doubly linked list node
- *
- * @n: Integer stored in the node
- * @prev: Pointer to the previous element of the list
- * @next: Pointer to the next element of the list
+ * bubble_sort - Sorting algorithms
+ * @array: array
+ * @size: size
  */
-typedef struct listint_s
+void bubble_sort(int *array, size_t size)
 {
-	const int n;
-	struct listint_s *prev;
-	struct listint_s *next;
-} listint_t;
+	size_t i, j;
+	int tmp;
 
-void print_array(const int *array, size_t size);
-void print_list(const listint_t *list);
-void bubble_sort(int *array, size_t size);
-void insertion_sort_list(listint_t **list);
-void selection_sort(int *array, size_t size);
-void quick_sort(int *array, size_t size);
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < (size - i - 1); j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+				tmp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = tmp;
 
-int partition(int *arr, int low, int high, size_t size);
-void sorting(int *arr, int low, int high, size_t size);
-
-#endif
+				print_array(array, size);
+			}
+		}
+	}
+}
